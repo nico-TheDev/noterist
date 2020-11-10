@@ -3,7 +3,9 @@ import React, { useState } from "react";
 import Search from "./components/Search";
 import TrackResult from "./components/TrackResult";
 interface Track {
-    track: Array<{ track_id: number; track_name: string; artist_name: string }>;
+    track_id: number;
+    track_name: string;
+    artist_name: string;
 }
 interface Song {
     track_name: string;
@@ -11,8 +13,6 @@ interface Song {
     lyrics_id: number;
     lyrics_body: string;
 }
-
-
 
 const App: React.FC<{}> = () => {
     const [songList, setSongList] = useState<null | Track[]>(null);

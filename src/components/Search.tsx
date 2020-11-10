@@ -11,7 +11,7 @@ const Search: React.FC<Props> = ({ setSongList }) => {
     const handleSubmit: (e: any) => void = async (e) => {
         e.preventDefault();
         const res = await fetch(
-            `https://cors-anywhere.herokuapp.com/${process.env.REACT_APP_API}/track.search?apikey=${process.env.REACT_APP_KEY}&q_track=${input}`
+            `https://cors-anywhere.herokuapp.com/${process.env.REACT_APP_API}/track.search?apikey=${process.env.REACT_APP_KEY}&q_track=${input}&page_size=50&s_track_rating=desc&f_has_lyrics`
         );
         const data = await res.json();
         console.log(data);

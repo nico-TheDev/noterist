@@ -17,7 +17,7 @@ const TrackResult: React.FC<Props> = ({ songList, setCurrentSong }) => {
                 🔍 SEARCH RESULT
             </h2>
             {songList?.map((song) => (
-                <TrackItem song={song} key={song.track_id} />
+                <TrackItem song={song} key={song.track_id} setCurrentSong={setCurrentSong}/>
             ))}
         </ul>
     );

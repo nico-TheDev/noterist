@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import Search from "./components/Search";
 import TrackResult from "./components/TrackResult";
+import LyricsBody from "./components/LyricsBody";
 interface Track {
     track_id: number;
     track_name: string;
@@ -34,7 +35,7 @@ const App: React.FC<{}> = () => {
                     setCurrentSong={setCurrentSong}
                     songList={songList}
                 />
-                <div></div>
+                <LyricsBody details={currentSong}/>
             </div>
         </div>
     );
